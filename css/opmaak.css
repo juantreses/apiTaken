@@ -1,0 +1,95 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap');
+
+body {
+    background-color: #eceff0;
+}
+
+body, input {
+    font:1em "Open Sans", sans-serif;
+    color: #363639;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px dashed #363639;
+}
+
+.list {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 3px 3px rgba(0, 0, 0, .1);
+}
+
+.list .header {
+    margin-bottom: 10px;
+    font: 2em "Shadows Into Light Two", cursive;
+}
+
+.items .item.done {
+    text-decoration: line-through;
+}
+
+.items li, .item-add .input {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    padding: 15px 0;
+}
+
+.items li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    width: 100%;
+}
+
+.items li:hover .done-button {
+    opacity: 1;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.done-button {
+    display: inline-block;
+    font-size: .8em;
+    background-color: #d9dfe1;
+    color: #363639;
+    padding: 3px 6px;
+    border: 0;
+    opacity: 0.4;
+}
+
+.done-button:hover {
+    cursor: pointer;
+}
+
+span {
+    display: flex;
+}
+
+
+.submit {
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 3px 3px #ddd;
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+
+.to-add {
+    display: flex;
+}
