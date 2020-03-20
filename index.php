@@ -18,6 +18,32 @@ $data = $taskService->getTaken();
 
 $todo = loadTemplate("taak");
 
+foreach ( $data as $key => $val )
+{
+
+    $mark = "<form action='lib/done.php' method='post' class='mark'>
+                <input type=\"hidden\" id=\"formname\" name=\"formname\" value=\"done\">
+                <input type=\"hidden\" id=\"tablename\" name=\"tablename\" value=\"todoItem\">
+                <input type='hidden' id='itm_id' name='itm_id' value=" . $data[$key]['itm_id'] . ">
+                <input type='submit' name='markdone' value='Mark as done' class='done-button'></form>";
+
+    $delete = "<form action='lib/delete.php' method='post' class='mark'>
+                <input type=\"hidden\" id=\"formname\" name=\"formname\" value=\"delete\">
+                <input type=\"hidden\" id=\"tablename\" name=\"tablename\" value=\"todoItem\">
+                <input type='hidden' id='itm_id' name='itm_id' value=" . $data[$key]['itm_id'] . ">
+                <input type='submit' name='delete' value='Delete' class='done-button'></form>";
+
+
+    if($data[$key]['taa_status'] == 1){
+        $data[$key]['done'] = "done";
+        $data[$key]['delete'] = $delete;
+    }else{
+        $data[$key]['done'] = " ";
+        $data[$key]['delete'] = $mark;
+    }
+
+}
+
 print replaceContent($data, $todo);
 ?>
     </ul>
