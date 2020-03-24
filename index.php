@@ -22,15 +22,11 @@ foreach ( $data as $key => $val )
 {
 
     $mark = "<form action='lib/done.php' method='post' class='mark'>
-                <input type=\"hidden\" id=\"formname\" name=\"formname\" value=\"done\">
-                <input type=\"hidden\" id=\"tablename\" name=\"tablename\" value=\"todoItem\">
-                <input type='hidden' id='itm_id' name='itm_id' value=" . $data[$key]['itm_id'] . ">
+                <input type='hidden' id='taa_id' name='taa_id' value=" . $data[$key]['taa_id'] . ">
                 <input type='submit' name='markdone' value='Mark as done' class='done-button'></form>";
 
     $delete = "<form action='lib/delete.php' method='post' class='mark'>
-                <input type=\"hidden\" id=\"formname\" name=\"formname\" value=\"delete\">
-                <input type=\"hidden\" id=\"tablename\" name=\"tablename\" value=\"todoItem\">
-                <input type='hidden' id='itm_id' name='itm_id' value=" . $data[$key]['itm_id'] . ">
+                <input type='hidden' id='taa_id' name='taa_id' value=" . $data[$key]['taa_id'] . ">
                 <input type='submit' name='delete' value='Delete' class='done-button'></form>";
 
 
@@ -57,6 +53,5 @@ print replaceContent($data, $todo);
         <input type="submit" name="addtask" value="Add" class="submit">
     </form>
 </div>
-<script src="js/main.js"></script>
 </body>
 </html>

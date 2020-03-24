@@ -1,7 +1,7 @@
 <?php
 
 
-$url = "localhost/phpCityOOPRefactor/api/taken";
+$url = "localhost/phpCityOOPRefactor/api/taak";
 
 $curl = curl_init();
 $headers = array();
