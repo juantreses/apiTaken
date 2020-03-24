@@ -1,7 +1,7 @@
 <?php
 
-
-$url = "localhost/phpCityOOPRefactor/api/taak";
+$id = $_POST['taa_id'];
+$url = "localhost/phpCityOOPRefactor/api/taak/$id";
 
 $curl = curl_init();
 $headers = array();
